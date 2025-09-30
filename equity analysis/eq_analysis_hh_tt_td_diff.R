@@ -1,6 +1,6 @@
 # --- get average travel time, travel distance and mode share for household per oek_status_gr ----
 # --- during weekdays (Monday - Friday) ----
-### base Scenario
+
 ### base Scenario
 # hh-level metrics
 legs_week_hh <- legs_joined %>%
@@ -289,5 +289,6 @@ hh_metrics_diff_w <- hh_oek_status_metrics_w %>%
   mutate(share_diff_BUS = share_BUS - share1_BUS) %>%
   mutate(share_diff_TRAIN = share_TRAIN - share1_TRAIN) %>%
   mutate(share_diff_TRAM_METRO = share_TRAM_METRO - share1_TRAM_METRO)
+
 
 write.csv(hh_metrics_diff_w, file = "hh_tt_td_diff_weekend_20250924.csv")
