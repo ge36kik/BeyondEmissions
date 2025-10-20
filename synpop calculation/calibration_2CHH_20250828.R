@@ -488,10 +488,10 @@ seed_scores <- eur_eval %>%
   arrange(max_diff_overall)
 
 seed_scores
-# best seed is 6 with max of 0.0621
+# best seed is 1 with max of 0.0621
 
-hh_synpop_10pct_2CHHD1 <- as.data.frame(calib_results[6])
-names(hh_synpop_10pct_2CHHD1) <- sub('seed_6.', '', names(hh_synpop_10pct_2CHHD1))
+hh_synpop_10pct_2CHHD1 <- as.data.frame(calib_results[1])
+names(hh_synpop_10pct_2CHHD1) <- sub('seed_1.', '', names(hh_synpop_10pct_2CHHD1))
 
 # --- prepare evaluation statistics to compare the seeds -----------------------
 eur_calib <- hh_synpop_10pct_2CHHD1 %>%
@@ -606,3 +606,4 @@ write.csv(eur_eval, file = "EUR_2CHH_target_calibrated_distribution_selectedseed
 write.csv(calib_summary, file = "Diesel_2CHH_calibration_stats_20250816.csv", row.names = FALSE)
 write.csv(eur_calib, file = "EUR_2CHH_current_EUR_shares_20250830.csv", row.names = FALSE)
 write.csv(eur_variance, file = "EUR_2CHH_calibration_stats_20250830.csv", row.names = FALSE)
+
